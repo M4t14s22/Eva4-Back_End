@@ -1,0 +1,102 @@
+/* Estilos generales del body */
+body {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en columna */
+    align-items: center; /* Centra el contenido horizontalmente */
+    background-image: url('./img/fondo.png'); /* Fondo de la página */
+    background-repeat: no-repeat; /* No repite la imagen */
+    background-size: cover; /* Escala la imagen para cubrir */
+    background-position: center; /* Centra la imagen */
+    min-height: 100vh; /* Altura mínima de la pantalla */
+    margin: 0; /* Elimina márgenes por defecto */
+    padding: 20px 0; /* Agrega espacio superior e inferior */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño */
+}
+
+/* Estilo para la barra de navegación */
+nav {
+    display: flex;
+    justify-content: flex-start; /* Alinea los elementos a la izquierda */
+    align-items: center; /* Centra los elementos verticalmente */
+    background-color: #af4c4c; /* Color de fondo */
+    padding: 10px 20px; /* Espaciado interno */
+    color: white; /* Color del texto */
+    position: fixed; /* Fija el nav en la parte superior */
+    top: 0; /* Alinea el nav al borde superior */
+    width: 100%; /* Hace que el nav ocupe todo el ancho */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para el nav */
+    z-index: 1000; /* Asegura que el nav quede por encima del resto */
+}
+
+/* Estilo de los links en el nav */
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px; /* Espaciado horizontal entre enlaces */
+}
+
+nav h2 {
+    margin-right: 20px; /* Espaciado entre el título y los enlaces */
+    margin-left: 20px;
+}
+
+/* Estilo del contenedor del formulario */
+.container {
+    margin-top: 120px; /* Espacio debajo del nav */
+    background-color: white; /* Fondo blanco */
+    border-radius: 15px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    padding: 20px; /* Espaciado interno */
+    width: 90%; /* Ajusta el ancho del contenedor */
+    max-width: 1200px; /* Limita el ancho máximo */
+    text-align: center; /* Centra el contenido */
+}
+
+/* Estilo de los encabezados */
+.container h1 {
+    color: #333; /* Color del encabezado */
+    font-size: 2rem; /* Tamaño del texto */
+    margin-bottom: 20px; /* Espacio debajo del encabezado */
+}
+
+/* Estilo de los inputs */
+.container input[type="text"] {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 10px; /* Espaciado interno */
+    margin: 10px 0; /* Espacio entre los inputs */
+    border: 1px solid #ccc; /* Borde sutil */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de la fuente */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño */
+}
+
+/* Estilo de los placeholders (texto dentro de los inputs) */
+.container input[type="text"]::placeholder {
+    color: #999; /* Color gris claro para el texto del placeholder */
+    font-style: italic; /* Estilo itálico para el texto del placeholder */
+}
+
+/* Estilo para el botón de creación */
+.container button {
+    background-color: #af4c4c; /* Rojo para coincidir con el nav */
+    color: white; /* Texto blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor a pointer */
+    transition: background-color 0.3s ease; /* Efecto suave al pasar el cursor */
+}
+
+/* Efecto hover en el botón */
+.container button:hover {
+    background-color: #9e2d2d; /* Rojo más oscuro cuando se pasa el cursor */
+}
+
+/* Espaciado para que los elementos del formulario no se amontonen */
+.container form {
+    display: flex;
+    flex-direction: column; /* Alinea los inputs en columna */
+    align-items: center; /* Centra los elementos */
+}

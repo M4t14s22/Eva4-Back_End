@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Projects</title>
+    <link rel="stylesheet" href="{% static 'list.css' %}">
+</head>
+<body>
+    <nav>
+        <h2>Proyectos Framework</h2>
+        <a href="{% url 'create_project' %}">Crear nuevo proyecto</a>
+    </nav>
+    <div class="container">
+        <h1>Proyectos</h1>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Titulo</th>
+                    <th>Rut Integrantes</th>
+                    <th>Integrantes</th>
+                    <th>Tecnologias</th>
+                    <th>Fecha de creacion</th>
+                    <th>Gestion</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for project in projects %}
+                    <tr>
+                        <td>{{ project.title }}</td>
+                        <td>{{ project.rut }}</td>
+                        <td>{{ project.integrantes }}</td>
+                        <td>{{ project.technology }}</td>
+                        <td>{{ project.created_at }}</td>
+                        <td>
+                            <a href="{% url 'update_project' project.id %}" class="edit">Editar</a>
+                            <a href="{% url 'delete_project' project.id %}" class="delete">Eliminar</a>
+                        </td>
+                        
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

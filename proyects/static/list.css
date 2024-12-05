@@ -1,0 +1,109 @@
+body {
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos estén en columna */
+    align-items: center; /* Centra el contenido horizontalmente */
+    background-image: url('./img/fondo.png'); /* Fondo de la página */
+    background-repeat: no-repeat; /* No repite la imagen */
+    background-size: cover; /* Escala la imagen para cubrir */
+    background-position: center; /* Centra la imagen */
+    min-height: 100vh; /* Altura mínima de la pantalla */
+    margin: 0; /* Elimina márgenes por defecto */
+    padding: 20px 0; /* Agrega espacio superior e inferior */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño */
+}
+
+/* Nav bar styles */
+nav {
+    display: flex;
+    justify-content: flex-start; /* Alinea los elementos a la izquierda */
+    align-items: center; /* Centra los elementos verticalmente */
+    background-color: #af4c4c; /* Color de fondo */
+    padding: 10px 20px; /* Espaciado interno */
+    color: white; /* Color del texto */
+    position: fixed; /* Fija el nav en la parte superior */
+    top: 0; /* Alinea el nav al borde superior */
+    width: 100%; /* Hace que el nav ocupe todo el ancho */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para el nav */
+    z-index: 1000; /* Asegura que el nav quede por encima del resto */
+}
+
+/* Estilo de los links en el nav */
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px; /* Espaciado horizontal entre enlaces */
+}
+
+nav h2 {
+    margin-right: 20px; /* Espaciado entre el título y los enlaces */
+    margin-left: 20px;
+}
+
+/* Espaciado para que el contenido no quede debajo del nav */
+/* Espaciado para que el contenido no quede debajo del nav */
+.container {
+    margin-top: 120px; /* Espacio debajo del nav */
+    background-color: white; /* Fondo blanco */
+    border-radius: 15px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    padding: 20px; /* Espaciado interno */
+    width: 90%; /* Ajusta el ancho del container */
+    max-width: 1200px; /* Limita el ancho máximo */
+    overflow-x: auto; /* Permite desplazamiento horizontal si el contenido es muy ancho */
+    margin-bottom: 20px; /* Espacio entre el div y el borde inferior */
+    text-align: center; /* Centra horizontalmente el contenido */
+}
+
+/* Centrar la tabla dentro del contenedor */
+.container table {
+    width: 100%; /* Hace que la tabla ocupe el 100% del ancho disponible */
+    margin: 0 auto; /* Centra la tabla horizontalmente */
+    border-collapse: collapse; /* Colapsa los bordes de la tabla para que no haya doble borde */
+}
+
+/* Opcional: Estilo para las celdas */
+.container th, .container td {
+    padding: 10px; /* Espaciado dentro de las celdas */
+    text-align: left; /* Alinea el texto a la izquierda */
+    border: 1px solid #ddd; /* Borde sutil para las celdas */
+}
+
+/* Estilo para el encabezado de la tabla */
+.container th {
+    background-color: #af4c4c; /* Fondo suave para los encabezados */
+    color: rgb(240, 240, 240);
+}
+
+/* Estilo para los enlaces de Editar y Eliminar como botones */
+.container a {
+    display: inline-block; /* Permite que los enlaces se comporten como botones */
+    background-color: #af4c4c; /* Fondo rojo similar al del nav */
+    color: white; /* Texto blanco */
+    text-decoration: none; /* Quita el subrayado */
+    padding: 8px 15px; /* Espaciado interno para los botones */
+    border-radius: 5px; /* Bordes redondeados */
+    margin: 5px; /* Espacio entre los botones */
+    text-align: center; /* Centra el texto dentro del botón */
+    transition: background-color 0.3s ease; /* Efecto suave al pasar el cursor */
+}
+
+/* Estilo para el botón de Editar */
+.container a.edit {
+    background-color: #4CAF50; /* Verde para editar */
+}
+
+.container a.edit:hover {
+    background-color: #45a049; /* Verde más oscuro al pasar el cursor */
+}
+
+/* Estilo para el botón de Eliminar */
+.container a.delete {
+    background-color: #f44336; /* Rojo para eliminar */
+}
+
+.container a.delete:hover {
+    background-color: #e53935; /* Rojo más oscuro al pasar el cursor */
+}
+
+

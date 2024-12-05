@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Crear Proyecto</title>
+    <link rel="stylesheet" href="{% static 'create.css' %}">
+</head>
+<body>
+    <nav>
+        <h2>Proyectos Framework</h2>
+        <a href="{% url 'list_projects' %}">Lista de proyectos</a>
+    </nav>
+    <div class="container">
+        <h1>Crear Proyecto</h1>
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" name="title" placeholder="Título del proyecto">
+            <input type="text" name="rut" placeholder="Rut de los Integrantes">
+            <input type="text" name="integrantes" placeholder="Integrantes del proyecto">
+            <input type="text" name="technology" placeholder="Tecnologías utilizadas">
+            <button type="submit">Crear</button>
+        </form>
+    </div>
+</body>
+</html>

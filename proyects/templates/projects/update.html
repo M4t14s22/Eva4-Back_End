@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Update Project</title>
+    <link rel="stylesheet" href="{% static 'update.css' %}">
+</head>
+<body>
+    <nav>
+        <h2>Proyectos Framework</h2>
+        <a href="{% url 'list_projects' %}">Lista de proyectos</a>
+    </nav>
+    <div class="container">
+        <h1>Editar Proyecto</h1>
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" name="title" value="{{ project.title }}" placeholder="Título del proyecto">
+            <input type="text" name="rut" value="{{ project.rut }}" placeholder="Rut de los Integrantes">
+            <input type="text" name="integrantes" value="{{ project.integrantes }}" placeholder="Integrantes del proyecto">
+            <input type="text" name="technology" value="{{ project.technology }}" placeholder="Tecnologías utilizadas">
+            <button type="submit">Actualizar</button>
+        </form>
+    </div>
+</body>
+</html>
